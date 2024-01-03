@@ -21,6 +21,7 @@ jobs:
     # The type of runner that the job will run on
     container: 
       image:  philosowaffle/peloton-to-garmin:console-stable
+      # image:  philosowaffle/peloton-to-garmin:console-latest
     steps:
     - name: Set env
       run: echo "OUTPUT_DIR=/app/output" >> $GITHUB_ENV
@@ -91,7 +92,7 @@ jobs:
         zip -r -j output.zip ${{ env.OUTPUT_DIR }}
         
     - uses: actions/upload-artifact@v3
-      if: ${{ github.event.inputs.saveLocalCopy == 'true' }}
+      if: ${{ github.event.inputs.saveLocalCopy }}
       with:
         name: output
         path: output.zip
