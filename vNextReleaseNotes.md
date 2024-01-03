@@ -3,19 +3,34 @@
 
 ## Features
 
-- [#502] Partial support for Peloton Gym
-- [#497] Add minimal support for Rowing Bootcamp
-- More exercise mappings
-	- [#495] Open Lateral Raise, Pike Push Up, Dolphin
-	- [#499] Forearm Side Plank Rotation, Straight Leg Bicycle
-	- [#510] Bear Crawl
-- [#532] GitHubAction now supports attaching output files to the GitHub Action as a zip file you can download - @anlesk
+- [#564] Set a custom title prefix on Workouts
+- [#559] Ability to exclude Outdoor Cycling workouts from sycning
 
 ## Fixes
 
-- [#526] `Auth appeared successful but there was an error sending the service ticket to Garmin`
-- `All converters were skipped.` - confusing log message when no workouts needed to be synced
+- [#581] Fix broken Documentation link in UI
+- [#580] Console Client couldn't load configuration file correctly (introduced by #564)
+- [#588] Fix Annual Challenge page still trying to load 2023
+- [#578] Fix VO2 and TE not updating on Garmin Connect
 
-## Housekeeping
+## Docs
 
-- [#509] Various dependency bumps
+- [#521] Called out that `\` special character is not currently supported in passwords
+
+## Docker Tags
+
+- Console
+    - `console-stable`
+    - `console-latest`
+    - `console-v4.1.0`
+    - `console-v4`
+- Api
+    - `api-stable`
+    - `api-latest`
+    - `api-v4.1.0`
+    - `api-v4`
+- WebUI
+    - `webui-stable`
+    - `webui-latest`
+    - `webui-v4.1.0`
+    - `webui-v4`
